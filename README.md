@@ -1,6 +1,16 @@
 # Cloudora
+### 📊 Repo Stats
+![Stars](https://img.shields.io/github/stars/ShreyaPandayy/cloudora?style=for-the-badge&color=yellow)
+![Forks](https://img.shields.io/github/forks/ShreyaPandayy/cloudora?style=for-the-badge&color=orange)
+![Issues](https://img.shields.io/github/issues/ShreyaPandayy/cloudora?style=for-the-badge&color=red)
+![Contributors](https://img.shields.io/github/contributors/ShreyaPandayy/cloudora?style=for-the-badge&color=blue)
+![License](https://img.shields.io/github/license/ShreyaPandayy/cloudora?style=for-the-badge&color=success)
 
 A simple file storage application built with Next.js, Clerk, Neon, Drizzle, and HeroUI.
+
+### ❤️ Made With
+![Made with Love](https://img.shields.io/badge/Made%20with-%E2%9D%A4-red?style=for-the-badge)
+![Open Source](https://img.shields.io/badge/Open%20Source-%F0%9F%90%9D-green?style=for-the-badge)
 
 ## Features
 
@@ -113,3 +123,58 @@ A simple file storage application built with Next.js, Clerk, Neon, Drizzle, and 
    # or
    pnpm start
    ```
+
+## Contributing 💡
+
+Contributions are always welcome! 🙌
+
+If you’d like to contribute to **Cloudora**, please follow these steps:
+
+1. **Fork** the repository
+2. Create a new branch:
+   ```bash
+   git checkout -b feature/your-feature-name
+3. Make your changes and commit them:
+   ```bash
+   git commit -m "✨ feat: add your meaningful commit message"
+Push your branch to your fork:
+```bash
+git push origin feature/your-feature-name
+```
+Open a Pull Request to the main branch of this repository 🚀
+
+🎉
+
+# 📌 Contribution Guidelines
+
+✅ Follow the existing code style and folder structure
+
+✅ Keep commits atomic and meaningful
+
+✅ Update documentation if required (README, comments, etc.)
+
+⚠️ For major changes, please open an issue first to discuss your idea
+
+💡 Pro Tip
+
+Use Conventional Commit Messages for clarity:
+
+✨ feat: for new features
+
+🐛 fix: for bug fixes
+
+📝 docs: for documentation changes
+
+🎨 style: for UI or code style updates
+
+♻️ refactor: for code restructuring
+
+🌍 Join the Community
+
+⭐ Star this repository if you like the project
+
+🔄 Share with others who might find it useful
+
+💬 Open an issue for feature requests or discussions
+
+Together, let’s make Cloudora the go-to file storage solution! 🚀
