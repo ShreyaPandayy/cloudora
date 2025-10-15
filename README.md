@@ -1,16 +1,24 @@
 # Cloudora
-### 📊 Repo Stats
-![Stars](https://img.shields.io/github/stars/ShreyaPandayy/cloudora?style=for-the-badge&color=yellow)
-![Forks](https://img.shields.io/github/forks/ShreyaPandayy/cloudora?style=for-the-badge&color=orange)
-![Issues](https://img.shields.io/github/issues/ShreyaPandayy/cloudora?style=for-the-badge&color=red)
-![Contributors](https://img.shields.io/github/contributors/ShreyaPandayy/cloudora?style=for-the-badge&color=blue)
-![License](https://img.shields.io/github/license/ShreyaPandayy/cloudora?style=for-the-badge&color=success)
+# Cloudora
+
+<p align="center">
+  <img src="https://img.shields.io/github/stars/ShreyaPandayy/cloudora?style=for-the-badge&color=yellow" />
+  <img src="https://img.shields.io/github/forks/ShreyaPandayy/cloudora?style=for-the-badge&color=orange" />
+  <img src="https://img.shields.io/github/issues/ShreyaPandayy/cloudora?style=for-the-badge&color=red" />
+  <img src="https://img.shields.io/github/contributors/ShreyaPandayy/cloudora?style=for-the-badge&color=blue" />
+  <img src="https://img.shields.io/github/license/ShreyaPandayy/cloudora?style=for-the-badge&color=success" />
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs" />
+  <img src="https://img.shields.io/badge/Clerk-3D3DFF?style=for-the-badge&logo=clerk&logoColor=white" />
+  <img src="https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white" />
+  <img src="https://img.shields.io/badge/Drizzle-1A202C?style=for-the-badge&logo=drizzle&logoColor=yellow" />
+  <img src="https://img.shields.io/badge/HeroUI-0D9488?style=for-the-badge&logo=tailwindcss&logoColor=white" />
+  <img src="https://img.shields.io/badge/ImageKit-00BCD4?style=for-the-badge&logo=imagekit&logoColor=white" />
+</p>
 
 A simple file storage application built with Next.js, Clerk, Neon, Drizzle, and HeroUI.
-
-### ❤️ Made With
-![Made with Love](https://img.shields.io/badge/Made%20with-%E2%9D%A4-red?style=for-the-badge)
-![Open Source](https://img.shields.io/badge/Open%20Source-%F0%9F%90%9D-green?style=for-the-badge)
 
 ## Features
 
@@ -178,3 +186,7 @@ Use Conventional Commit Messages for clarity:
 💬 Open an issue for feature requests or discussions
 
 Together, let’s make Cloudora the go-to file storage solution! 🚀
+
+### ❤️ Made With
+![Made with Love](https://img.shields.io/badge/Made%20with-%E2%9D%A4-red?style=for-the-badge)
+![Open Source](https://img.shields.io/badge/Open%20Source-%F0%9F%90%9D-green?style=for-the-badge)
