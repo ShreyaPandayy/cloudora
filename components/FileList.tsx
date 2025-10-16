@@ -51,27 +51,30 @@ export default function FileList({
   const [selectedFile, setSelectedFile] = useState<FileType | null>(null);
 
   // Fetch files
-  const fetchFiles = async () => {
-    setLoading(true);
-    try {
-      let url = `/api/files?userId=${userId}`;
-      if (currentFolder) {
-        url += `&parentId=${currentFolder}`;
-      }
+const fetchFiles = async () => {
+  setLoading(true);
+  try {
+    let url = `/api/files`;
 
-      const response = await axios.get(url);
-      setFiles(response.data);
-    } catch (error) {
-      console.error("Error fetching files:", error);
-      addToast({
-        title: "Error Loading Files",
-        description: "We couldn't load your files. Please try again later.",
-        color: "danger",
-      });
-    } finally {
-      setLoading(false);
+    if (currentFolder) {
+      url += `?parentId=${currentFolder}`;
     }
-  };
+
+    const response = await axios.get(url, { withCredentials: true }); // 👈 Fix
+    setFiles(response.data || []);
+  } catch (error) {
+    console.error("Error fetching files:", error);
+    addToast({
+      title: "Error Loading Files",
+      description: "We couldn't load your files. Please try again later.",
+      color: "danger",
+    });
+  } finally {
+    setLoading(false);
+  }
+};
+
+
 
   // Fetch files when userId, refreshTrigger, or currentFolder changes
   useEffect(() => {

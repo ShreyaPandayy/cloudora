@@ -22,7 +22,7 @@ declare module "@react-types/shared" {
   }
 }
 
-// Create a context for ImageKit authentication
+// Context for ImageKit authentication
 export const ImageKitAuthContext = createContext<{
   authenticate: () => Promise<{
     signature: string;
@@ -39,8 +39,8 @@ export const useImageKitAuth = () => useContext(ImageKitAuthContext);
 const authenticator = async () => {
   try {
     const response = await fetch("/api/imagekit-auth");
-    const data = await response.json();
-    return data;
+    if (!response.ok) throw new Error("Failed to authenticate with ImageKit");
+    return await response.json();
   } catch (error) {
     console.error("Authentication error:", error);
     throw error;
@@ -51,17 +51,25 @@ export function Providers({ children, themeProps }: ProvidersProps) {
   const router = useRouter();
 
   return (
-    <HeroUIProvider navigate={router.push}>
-      <ImageKitProvider
-        authenticator={authenticator}
-        publicKey={process.env.NEXT_PUBLIC_IMAGEKIT_PUBLIC_KEY || ""}
-        urlEndpoint={process.env.NEXT_PUBLIC_IMAGEKIT_URL_ENDPOINT || ""}
-      >
-        <ImageKitAuthContext.Provider value={{ authenticate: authenticator }}>
-          <ToastProvider placement="top-right" />
-          <NextThemesProvider {...themeProps}>{children}</NextThemesProvider>
-        </ImageKitAuthContext.Provider>
-      </ImageKitProvider>
-    </HeroUIProvider>
+    <NextThemesProvider
+      attribute="class"
+      defaultTheme="system"
+      enableSystem
+      disableTransitionOnChange
+      {...themeProps}
+    >
+      <HeroUIProvider navigate={router.push}>
+        <ImageKitProvider
+          authenticator={authenticator}
+          publicKey={process.env.NEXT_PUBLIC_IMAGEKIT_PUBLIC_KEY || ""}
+          urlEndpoint={process.env.NEXT_PUBLIC_IMAGEKIT_URL_ENDPOINT || ""}
+        >
+          <ImageKitAuthContext.Provider value={{ authenticate: authenticator }}>
+            <ToastProvider placement="top-right" />
+            {children}
+          </ImageKitAuthContext.Provider>
+        </ImageKitProvider>
+      </HeroUIProvider>
+    </NextThemesProvider>
   );
 }

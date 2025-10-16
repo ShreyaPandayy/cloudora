@@ -21,10 +21,12 @@ export default function RootLayout({
 }>) {
   return (
     <ClerkProvider>
-      <html lang="en" className="dark">
+      {/* ✅ Removed hardcoded dark, added suppressHydrationWarning */}
+      <html lang="en" suppressHydrationWarning>
         <body
           className={`${inter.variable} antialiased bg-background text-foreground`}
         >
+          {/* ✅ Providers should handle ThemeProvider (next-themes + HeroUI) */}
           <Providers>{children}</Providers>
         </body>
       </html>
